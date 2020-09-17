@@ -1,0 +1,196 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+<style>
+    ol {
+        list-style-type: none;
+        float: right
+    }
+        ol li {
+            margin: 0px 10px;
+            color: black;
+            float: left
+            /*text-decoration: none*/
+        }
+        ol li a {
+            
+            color: black;
+            text-decoration: none
+        }
+    .cs1:hover{
+        background-color:lawngreen
+    }
+    .cs2:hover {
+        background-color: lawngreen
+    }
+    /*div{
+        height: 100px;
+        width: 50px
+    }*/
+    .tb1 {
+        height: 80px;
+        width: 250px;
+        margin-top: 20px;
+        margin-bottom:20px
+    }
+    .cs1{     
+        font-size:x-large;
+        height:80px;
+        width:30px
+    }
+    .cs2 {
+        font-size: x-large
+    }
+    .tb2 {
+        width: 2700px;
+        height: 250px;
+        float: left;
+        
+    }
+    .tb2:hover{
+        background-color:gainsboro
+    }
+    .tb3 {
+        width: 2700px;
+        height: 250px;
+        float: left
+    }
+        .tb3:hover {
+            background-color: gainsboro
+        }
+    .tb4 {
+        width: 2700px;
+        height: 250px;
+        float: left
+    }
+        .tb4:hover {
+            background-color: gainsboro
+        }
+    .tb5 {
+        width: 2700px;
+        height: 250px;
+        float: left
+    }
+        .tb5:hover {
+            background-color: gainsboro
+        }
+    .tb6 {
+        width: 2700px;
+        height: 250px;
+        float: left
+    }
+        .tb6:hover {
+            background-color: gainsboro
+        }
+    .u1 {
+        list-style-type: none;        
+    }
+        .u1 li {
+            text-decoration: none;
+            float: left
+        }
+        /*.tb3{
+            float:left;
+        }*/
+        /*.tb3 span{
+            float:right;
+        }*/
+    .tb2_2 ul {
+        list-style-type: none;
+    }
+    .tb3_2 ul {
+        list-style-type: none;
+    }
+    .tb4_2 ul {
+        list-style-type: none;
+    }
+    .tb5_2 ul {
+        list-style-type: none;
+    }
+    .tb6_2 ul {
+        list-style-type: none;
+    }
+</style>
+<div class="text-center">
+    @*<h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
+    <div>
+        <img src="~/Img/img1.png" />
+        <ol>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">二手房</a></li>
+            <li><a href="#">尾页</a></li>
+            <li><a href="#"><img src="~/Img/img2.png" />用户登陆</a></li>
+        </ol>
+    </div>
+    <div></div>
+    <div>
+        <div class="tb1"><span class="cs1">全部楼盘</span><span class="cs2">其它楼盘</span></div>
+        <div class="tb2">
+            <div class="tb2_1" style="float:left">
+                <a href="#" onclick="location.href='/Home/Privacy'"><img src="~/Img/img7.jpg" height="200px" width="200px" /></a>
+            </div>
+            <div class="tb2_2" style="float:left">
+                <ul style="float:right">
+                    <li style="font-size:30px">大江大河洒到会所</li>
+                    <li>heihei</li>
+                    <li>heihei</li>
+                </ul>
+            </div>
+            
+        </div>
+        
+        <div class="tb3">
+            <div class="tb3_1" style="float:left">
+                <a href="#" onclick="location.href='/Home/Privacy'"><img src="~/Img/img6.jpg" height="200px" width="200px" /></a>
+            </div>
+            <div class="tb3_2" style="float:left">
+                <ul style="float:right">
+                    <li style="font-size:30px">heihei</li>
+                    <li>heihei</li>
+                    <li>heihei</li>
+                </ul>
+            </div>
+        </div>               
+        <div class="tb4">
+            <div class="tb4_1" style="float:left">
+                <a href="#"><img src="~/Img/img5.jpg" height="200px" width="200px" /></a>
+            </div>
+            <div class="tb4_2" style="float:left">
+                <ul style="float:right">
+                    <li style="font-size:30px">heihei</li>
+                    <li>heihei</li>
+                    <li>heihei</li>
+                </ul>
+            </div>
+        </div>
+                
+        <div class="tb5">
+            <div class="tb5_1" style="float:left">
+                <a href="#"><img src="~/Img/img4.jpg" height="200px" width="200px" /></a>
+            </div>
+            <div class="tb5_2" style="float:left">
+                <ul style="float:right">
+                    <li style="font-size:30px">heihei</li>
+                    <li>heihei</li>
+                    <li>heihei</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="tb6">
+            <div class="tb6_1" style="float:left">
+                <a href="#"><img src="~/Img/img3.jpg" height="200px" width="200px" /></a>
+            </div>
+            <div class="tb6_2" style="float:left">
+                <ul style="float:right">
+                    <li style="font-size:30px">heihei</li>
+                    <li>heihei</li>
+                    <li>heihei</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
