@@ -22,6 +22,14 @@ namespace HouseReception.Controllers
         {
             return View();
         }
+        public IActionResult Particulars()
+        {
+            return View();
+        }
+        public IActionResult Details()
+        {
+            return View();
+        }        
 
         public IActionResult Privacy()
         {

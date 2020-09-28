@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseReception", "HouseReception\HouseReception.csproj", "{574B2486-AF19-45D6-9FE4-D1CC3A3A5E52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HouseReception", "HouseReception\HouseReception.csproj", "{574B2486-AF19-45D6-9FE4-D1CC3A3A5E52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

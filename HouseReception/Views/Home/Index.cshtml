@@ -2,25 +2,106 @@
     ViewData["Title"] = "Home Page";
     Layout = null;
 }
+<script src="~/js/jquery-3.3.1.min.js"></script>  
+<div>
+    <div class="dv0">
+        <img src="~/Img/img1.png" height="85px" width="200px" />
+        <ol>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">二手房</a></li>
+            <li><a href="#">租房</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">联系客服</a></li>
+            <li><a href="#"><img src="~/Img/img2.png" />用户登陆</a></li>
+        </ol>
+    </div>
+    <div class="dv1" style="font:20px">
+        <input id="txt1" type="text" name="name" style="height:50px;width:400px;float:right;font-size:20px" />
+        <input id="btn1" onclick="cha()" type="button" value="搜索" style="height:50px;width:100px;float:right;background-color:red;border-radius:6px" />
+        @*<input id="btn1" onclick="cha()" name="name" value="搜索" style="height:50px;width:100px;float:right;background-color:red;border-radius:6px" />*@
+    </div>
+</div>
+<div id="dv2" style="border:1px solid">
+    @*面积    <div style="padding:30px 40px"><input id="Checkbox1" type="checkbox" style="margin:30px 40px" />80㎡-90㎡</div> <div style="padding:30px 40px"><input id="Checkbox1" type="checkbox" style="margin:30px 40px" />90㎡-100㎡</div> <div style="padding:30px 40px"><input id="Checkbox1" type="checkbox" style="margin:30px 40px" />100-200㎡</div>
+        <br />
+        <br />
+        户型    <div style="padding:30px 40px"><input id="Checkbox1" type="checkbox" />一室</div><div><input id="Checkbox1" type="checkbox" />两室</div><div><input id="Checkbox1" type="checkbox" />三室</div>
+        <br />
+        <br />
+        类型    <div style="padding:30px 40px"><input id="Checkbox1" type="checkbox" />住宅</div><div><input id="Checkbox1" type="checkbox" />别墅</div><div><input id="Checkbox1" type="checkbox" />商业</div>*@
+    <div class="screen0">
+        <div style="float:left;margin:40px 0px">面积</div>
+        <div class="screen1">
+            <ul>
+                @*<li>面积</li>*@
+                <li><input id="Checkbox1" type="checkbox" />80㎡-90㎡</li>
+                <li><input id="Checkbox1" type="checkbox" />90㎡-100㎡</li>
+                <li><input id="Checkbox1" type="checkbox" />100-200㎡</li>
+            </ul>
+        </div>
+    </div>
+    <div class="screen01">
+        <div style="float:left;margin:40px 0px">户型</div>
+        <div class="screen2">
+            <ul>
+                <li><input id="Checkbox1" type="checkbox" />一室</li>
+                <li><input id="Checkbox1" type="checkbox" />二室</li>
+                <li><input id="Checkbox1" type="checkbox" />三室</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="screen02">
+        <div style="float:left;margin:40px 0px">类型</div>
+        <div class="screen3">
+            <ul>
+                @*<li>类型</li>*@
+                <li><input id="Checkbox1" type="checkbox" />住宅</li>
+                <li><input id="Checkbox1" type="checkbox" />别墅</li>
+                <li><input id="Checkbox1" type="checkbox" />商业</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="st">
+
+    </div>    
+</div>
+<div class="btn" style="margin:600px  600px">
+    <input onclick="HouseShow(1)" type="button" value="首页"  style="background-color:#4CAF50;border:none;color:white;padding:15px 32px;text-align:center;text-decoration:none;display:inline-block;font-size:16px;border-radius:8px"/>
+    <input onclick="HouseShow(page -= 1)" type="button" value="上一页" style="background-color:#4CAF50;border:none;color:white;padding:15px 32px;text-align:center;text-decoration:none;display:inline-block;font-size:16px;border-radius:8px"/>
+    <input onclick="HouseShow(page += 1)" type="button" value="下一页" style="background-color:#4CAF50;border:none;color:white;padding:15px 32px;text-align:center;text-decoration:none;display:inline-block;font-size:16px;border-radius:8px"/>
+    <input onclick="HouseShow(pagecount)" type="button" value="尾页" style="background-color:#4CAF50;border:none;color:white;padding:15px 32px;text-align:center;text-decoration:none;display:inline-block;font-size:16px;border-radius:8px"/>
+</div>
+
 <style>
+    .btn input:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
     ol {
         list-style-type: none;
-        float: right
+        float: right;
+        height: 10px;
     }
+
         ol li {
             margin: 0px 10px;
             color: black;
-            float: left
+            float: left;
+            font-size: 20px
             /*text-decoration: none*/
         }
-        ol li a {
-            
-            color: black;
-            text-decoration: none
-        }
-    .cs1:hover{
-        background-color:lawngreen
+
+            ol li a {
+                color: black;
+                text-decoration: none
+            }
+
+    .cs1:hover {
+        background-color: lawngreen
     }
+
     .cs2:hover {
         background-color: lawngreen
     }
@@ -28,169 +109,277 @@
         height: 100px;
         width: 50px
     }*/
+    /*.dv1{
+        width:2000px;
+        height:1000px
+    }*/
+    .st {
+        width: 2000px;
+        height: 1000px;
+        margin: 100px 0px
+    }
+
     .tb1 {
         height: 80px;
         width: 250px;
         margin-top: 20px;
-        margin-bottom:20px
+        margin-bottom: 20px
     }
-    .cs1{     
-        font-size:x-large;
-        height:80px;
-        width:30px
+
+    .cs1 {
+        font-size: x-large;
+        height: 80px;
+        width: 30px
     }
+
     .cs2 {
         font-size: x-large
     }
-    .tb2 {
-        width: 2700px;
-        height: 250px;
+
+    .tb {
+        height: 210px;
+        width: 1500px;
+        margin: 0px 300px;
+        /*border: 1px dashed black*/
+    }
+
+        .tb:hover {
+            background-color: snow;
+            /*border: outset;*/
+            padding: 25px 0px
+        }
+
+    .tb1 {
+        padding: 0px 300px
+    }
+
+    .tb2_1 {
+        height: 300px;
+        padding: 0px 100px;
+        margin: 0px 100px
+        /*background-color: whitesmoke;*/
+    }
+
+        .tb2_1 ul {
+            list-style-type: none;
+            padding: 0px 100px;
+            /*margin: 0px 100px*/
+        }
+
+            .tb2_1 ul li {
+                text-decoration: none;
+                font-size: 20px;
+                width: 600px
+            }
+
+    .dv1 {
+        width: 2000px;
+        height: 80px;
+        background-color: whitesmoke
+    }
+
+    #dv2 {
+        width: 1447px;
+        height: 300px;
+        font-size: 23px;
+        padding: 0px 30px;
+        margin: 0px 300px
+        /*margin:50px 30px;*/
+        /*background-color:aquamarine*/
+    }
+
+        #dv2 input {
+            height: 20px;
+            width: 20px;
+        }
+
+    .screen0 {
         float: left;
-        
+        width: 1447px;
+        height: 95px
     }
-    .tb2:hover{
-        background-color:gainsboro
+
+    .screen01 {
+        float: left;
+        width: 1447px;
+        height: 95px
     }
-    .tb3 {
-        width: 2700px;
-        height: 250px;
-        float: left
+
+    .screen02 {
+        float: left;
+        width: 1447px;
+        height: 95px
     }
-        .tb3:hover {
-            background-color: gainsboro
-        }
-    .tb4 {
-        width: 2700px;
-        height: 250px;
-        float: left
-    }
-        .tb4:hover {
-            background-color: gainsboro
-        }
-    .tb5 {
-        width: 2700px;
-        height: 250px;
-        float: left
-    }
-        .tb5:hover {
-            background-color: gainsboro
-        }
-    .tb6 {
-        width: 2700px;
-        height: 250px;
-        float: left
-    }
-        .tb6:hover {
-            background-color: gainsboro
-        }
-    .u1 {
-        list-style-type: none;        
-    }
-        .u1 li {
-            text-decoration: none;
-            float: left
-        }
-        /*.tb3{
-            float:left;
-        }*/
-        /*.tb3 span{
-            float:right;
-        }*/
-    .tb2_2 ul {
+
+    .screen ul {
         list-style-type: none;
+        float: left;
+        /*float: left;*/
+        /*text-decoration:none*/
     }
-    .tb3_2 ul {
+
+    .screen1 ul li {
         list-style-type: none;
+        float: left;
+        margin: 20px 30px;
+        /*border: 1px solid;*/
+        /*float:left*/
     }
-    .tb4_2 ul {
+
+    .screen2 ul li {
         list-style-type: none;
+        float: left;
+        margin: 20px 30px;
+        /*border: 1px solid;*/
+        /*float:left*/
     }
-    .tb5_2 ul {
+
+    .screen3 ul li {
         list-style-type: none;
-    }
-    .tb6_2 ul {
-        list-style-type: none;
+        float: left;
+        margin: 20px 30px;
+        /*border: 1px solid;*/
+        /*float:left*/
     }
 </style>
-<div class="text-center">
-    @*<h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
-    <div>
-        <img src="~/Img/img1.png" />
-        <ol>
-            <li><a href="#">首页</a></li>
-            <li><a href="#">二手房</a></li>
-            <li><a href="#">尾页</a></li>
-            <li><a href="#"><img src="~/Img/img2.png" />用户登陆</a></li>
-        </ol>
-    </div>
-    <div></div>
-    <div>
-        <div class="tb1"><span class="cs1">全部楼盘</span><span class="cs2">其它楼盘</span></div>
-        <div class="tb2">
-            <div class="tb2_1" style="float:left">
-                <a href="#" onclick="location.href='/Home/Privacy'"><img src="~/Img/img7.jpg" height="200px" width="200px" /></a>
-            </div>
-            <div class="tb2_2" style="float:left">
-                <ul style="float:right">
-                    <li style="font-size:30px">大江大河洒到会所</li>
-                    <li>heihei</li>
-                    <li>heihei</li>
-                </ul>
-            </div>
-            
-        </div>
-        
-        <div class="tb3">
-            <div class="tb3_1" style="float:left">
-                <a href="#" onclick="location.href='/Home/Privacy'"><img src="~/Img/img6.jpg" height="200px" width="200px" /></a>
-            </div>
-            <div class="tb3_2" style="float:left">
-                <ul style="float:right">
-                    <li style="font-size:30px">heihei</li>
-                    <li>heihei</li>
-                    <li>heihei</li>
-                </ul>
-            </div>
-        </div>               
-        <div class="tb4">
-            <div class="tb4_1" style="float:left">
-                <a href="#"><img src="~/Img/img5.jpg" height="200px" width="200px" /></a>
-            </div>
-            <div class="tb4_2" style="float:left">
-                <ul style="float:right">
-                    <li style="font-size:30px">heihei</li>
-                    <li>heihei</li>
-                    <li>heihei</li>
-                </ul>
-            </div>
-        </div>
-                
-        <div class="tb5">
-            <div class="tb5_1" style="float:left">
-                <a href="#"><img src="~/Img/img4.jpg" height="200px" width="200px" /></a>
-            </div>
-            <div class="tb5_2" style="float:left">
-                <ul style="float:right">
-                    <li style="font-size:30px">heihei</li>
-                    <li>heihei</li>
-                    <li>heihei</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="tb6">
-            <div class="tb6_1" style="float:left">
-                <a href="#"><img src="~/Img/img3.jpg" height="200px" width="200px" /></a>
-            </div>
-            <div class="tb6_2" style="float:left">
-                <ul style="float:right">
-                    <li style="font-size:30px">heihei</li>
-                    <li>heihei</li>
-                    <li>heihei</li>
-                </ul>
-            </div>
-        </div>
+<script>
+    var page = 1;
+    //var pagesize = 6;
+    var pagecount = 1;
+    $(function () {
+        HouseShow(page);
+    });
+    //function First() {
+    //    pageindex = 1;
+    //    HuoseShow();
+    //}
+    //function Pre() {
+    //    if (pageindex > 1) {
+    //        pageindex--;
+    //        HouseShow();
+    //    }
+    //    else {
+    //        alert("当前已是首页");
+    //    }
+    //}
+    //function Next() {
+    //    pageindex++;
+    //    HouseShow();
+    //}
+    //function Last() {
+    //    pageindex = pagecount;
+    //    HouseShow();
+    //}
 
-    </div>
-</div>
+    //var allcount = 1;
+    function HouseShow(page) {
+        //var page = ;
+        //obj.pageCount = page;
+        var name = $("#txt1").val();
+        var pageSize = 7;
+        $.ajax({
+            url: "http://localhost:60345/api/HouseInfoes/GetHouse",/*?pageindex=" /*+ pageindex+ "&pageindex="+pagesize*/
+            type: 'get',
+            data: { pageindex: page, pagesize: pageSize, name: name },
+            success: function (data) {
+                pagecount = data.pageCount;
+                //allcount = data.allCount;
+                $(".st").empty();
+                //for (var i = 0; i < data.length; i++) {
+                $(data.houseInfos).each(function () {                    
+                    var str = "<div class='tb'>";
+                    str += "<div class='tb1_1' style='float:left'>"
+                    str += "<a href='#' onclick='Par(" + this.htsId + ")'>" + '<img src=' + this.htPictures + ' height="200px" width="200px" />' + "</a>";
+                    str += "</div>";
+                    str += "<div class='tb2_1'>";
+                    str += "<ul>";
+                    str += "<li style='font-size:30px'>" + "<a href='#' style='text-decoration:none;color:black' onclick='Par(" + this.htsId + ")'>" + this.htsName + "</a>" + "</li>";
+                    str += "<li>" + "户型:" + this.hNames + "    房子面积:" + this.houseArea + "    朝向:" + this.orientation + "</li>";
+                    ////str += "<li>" + data[i].rim + "</li>";
+                    //str += "<li>" + data[i].orientation + "</li>";
+                    str += "<li>" + this.projictSite + "</li>";
+                    str += "<li style='color: cornflowerblue'>" + this.tName + "&nbsp;&nbsp;&nbsp;" + this.sellState + "</li>";
+                    str += "<li style='float:right;width:130px;font-weight:900;color:red;font-size:30px'>" + this.htsPrice + "</li>";
+                    str += "</ul>";
+                    str += "</div>";                    
+                    //str += "<div>";                    
+                    $(".st").append(str);
+                })
+
+            }
+            //}
+        })
+
+    }
+    //function showadmin() {
+    //    var nowTime = new Date().getFullYear();
+    //    var id = 2;
+        
+    //    //ssionStorage["Id"];
+    //    $.ajax({
+    //        url: "http://localhost:60345/api/Ask/GetAdministrators",
+    //        data: { AId: id },
+    //        success: function (d) {
+    //            $("#aimg").empty();
+    //            $("#tb").empty();
+
+    //            $(d).each(function () {
+    //                var startTime = String(this.beginTime).substring(0, 4);
+    //                var time = nowTime - startTime;
+    //                $("#aimg").append('<img style="width:90px;height:130px" src = "/Img/img14.jpg" />');
+    //                var str = '<tr><td style="font-size:25px">' + this.aName + '</td></tr>'
+    //                    + '<tr><td>tel：<span style="color:red">0217749转' + this.companyCard + '</span></td></tr>'
+    //                    + '<tr><td>[' + this.aPosition + ']</td></tr>'
+    //                    + '<tr><td>工作资历：' + time + '年</td></tr>';
+    //                $("#tb").append(str);
+    //            })
+    //        }
+    //    })
+    //}
+
+    function Par(id) {
+        sessionStorage["Id"] = id;
+        location.href = '/Home/Details';
+    }
+    function cha() {
+        HouseShow(page);
+        //var name = $("#txt1").val();
+        ////var projictSite = $("#txt1").val();
+        //$.ajax({
+        //    url: "http:
+        //localhost:
+        //60345 / api / HouseInfoes / GetHouse",
+        //    //data: { name: htsName, name: projictSite },
+        //    type: "get",
+        //    data: { name: name },
+        //    success: function (data) {
+        //        $(".st").empty();
+        //        for (var i = 0; i < data.length; i++) {
+        //            var str = "<div class='tb'>";
+        //            str += "<div class='tb1_1' style='float:left'>"
+        //            str += "<a href='#' onclick='Par(" + data[i].htsId + ")'>" + '<img src=' + data[i].htPictures + ' height="200px" width="200px" />' + "</a>";
+        //            str += "</div>";
+        //            str += "<div class='tb2_1'>";
+        //            str += "<ul>";
+        //            str += "<li style='font-size:30px'>" + "<a href='#' style='text-decoration:none;color:black' onclick='Par(" + data[i].htsId + ")'>" + data[i].htsName + "</a>" + "</li>";
+        //            str += "<li>" + "户型:" + data[i].hNames + "    房子面积:" + data[i].houseArea + "    朝向:" + data[i].orientation + "</li>";
+        //            ////str += "<li>" + data[i].rim + "</li>";
+        //            //str += "<li>" + data[i].orientation + "</li>";
+        //            str += "<li>" + data[i].projictSite + "</li>";
+        //            str += "<li style='color: cornflowerblue'>" + data[i].tName + "&nbsp;&nbsp;&nbsp;" + data[i].sellState + "</li>";
+        //            str += "<li style='float:right;width:130px;font-weight:900;color:red;font-size:30px'>" + data[i].htsPrice + "</li>";
+        //            str += "</ul>";
+        //            str += "</div>";
+        //            str += "</div>";
+        //            str += "<br />"
+        //            $(".st").append(str);
+        //        }
+        //    }
+        //});
+    }
+
+</script>
+@*<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
+
