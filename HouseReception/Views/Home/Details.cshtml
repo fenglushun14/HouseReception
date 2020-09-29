@@ -104,13 +104,13 @@
                 type: 'get',
                 success: function (dt) {
                     var nowTime = new Date().getFullYear();
-                    var startTime = String(this.beginTime).substring(0, 4);
+                    var startTime = String(dt.beginTime).substring(0, 4);
                     var time = nowTime - startTime;
                     $("#txt1").empty();
                     var str = "<div class='tb1_1' style='float:left;margin:100px 50px 0px 300px'>";
                     str += "<img src=" + dt.htPictures + " />";
                     str += "</div>";
-                    str += "<div class='tb2_1' style='float:left;margin:100px 0px'>";
+                    str += "<div class='tb2_1' style='float:left;margin:100px 0px 0px 0px'>";
                     str += "<ul>";
                     str += "<li style='list-style:none ;font-weight:900;color:red;font-size:30px'>" + dt.htsName + "&nbsp;&nbsp;" + dt.htsPrice + "&nbsp;&nbsp;" + dt.hNames + "</li>";
                     str += "<li style='list-style:none ;margin-top:20px;font-size:20px'>" + "房子面积:" + dt.houseArea + "&nbsp;&nbsp;&nbsp;" + "  绿化率:" + dt.greeningrate + "<br /><br />" + "朝向:" + dt.orientation + "</li>";
@@ -119,8 +119,14 @@
                     //str += "<li style='list-style:none'>" + data.greeningrate + "</li>";
                     str += "</ul>";
                     str += "</div>";
-                    str += "<div style='height:250px;width:400px;float:right;margin-top:300px;margin-right:300px;border:1px solid'>";
+                    str += "<div style='height:200px;width:480px;float:right;margin-top:63px;margin-right:565px'>";
                     str += "<a href='#'>" + '<img src=' + dt.aPicture + ' height="150px" width="150px"/>' + "</a>";
+                    str += "<ul style='float:right'>";
+                    str += "<li style='font-size:25px;color:red;margin-right:10px'>" + dt.aName + "</li>";
+                    str += "<li style='font-size:25px;color:red;margin-top:23px'>"+ "0217749转" + dt.companyCard +  "</li>";
+                    //str += "<li style='font-size:25px;color:red;margin-left:10px;margin-top:5px'>" + dt.aPosition + "</li>";
+                    str += "<li style='font-size:25px;color:red;margin-right:10px;margin-top:23px'>" +" 工作时长：" + time + "年" + "</li>";
+                    str += "</ul>";
                     str += "</div>";
                     $("#txt1").append(str);
 
